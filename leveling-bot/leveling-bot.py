@@ -1,8 +1,9 @@
 import discord
+from discord.ext.commands import Bot
 
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = discord.Client(intents=intents)
+bot = Bot(command_prefix='R', intents=intents)
 
 bot.run('TOKEN')
